@@ -1,0 +1,397 @@
+body,
+html {
+  background-color: #f5f5f5;
+  color: #4e4e4e;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1e1e1e;
+}
+
+a {
+  color: #1e1e1e;
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+  color: #0078ff;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav_section {
+  margin-top: 4rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+.navbar-b {
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  padding-top: 1.563rem;
+  padding-bottom: 1.563rem;
+}
+
+.navbar-b.navbar-reduce {
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-b.navbar-reduce .nav-item {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.navbar-b.navbar-reduce .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.navbar-b.navbar-reduce .nav-link:before {
+  content: '';
+  position: absolute;
+  margin-left: 0px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: all 500ms ease;
+}
+
+.navbar-b.navbar-reduce .nav-link:hover {
+  color: #1b1b1b;
+}
+
+.navbar-b.navbar-reduce .nav-link:hover:before {
+  width: 35px;
+}
+
+.navbar-b.navbar-reduce .show > .nav-link:before,
+.navbar-b.navbar-reduce .active > .nav-link:before,
+.navbar-b.navbar-reduce .nav-link.show:before,
+.navbar-b.navbar-reduce .nav-link.active:before {
+  width: 35px;
+}
+
+.navbar-b.navbar-reduce {
+  transition: all 0.5s ease-in-out;
+  background-color: blue;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 0 1rem black;
+}
+
+.navbar-b.navbar-reduce .nav-link {
+  color: #fff;
+}
+
+.navbar-b.navbar-reduce .nav-link:before {
+  background-color: black;
+}
+
+.navbar-b.navbar-reduce .nav-link:hover {
+  color: black;
+}
+
+.navbar-b.navbar-reduce .show > .nav-link,
+.navbar-b.navbar-reduce .active > .nav-link,
+.navbar-b.navbar-reduce .nav-link.show,
+.navbar-b.navbar-reduce .nav-link.active {
+  color: black;
+}
+
+.navbar-b.navbar-reduce .navbar-brand {
+  color: #fff;
+}
+
+.navbar-b.navbar-reduce .navbar-toggler span {
+  background-color: #1b1b1b;
+}
+
+.navbar-b .navbar-brand {
+  color: #fff;
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+}
+
+.logo_title {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
+.navbar-b .dropdown.show .dropdown-menu,
+.navbar-b .dropdown-btn.show .dropdown-menu {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  visibility: visible !important;
+}
+
+.navbar-b .dropdown-menu {
+  margin: 1.12rem 0 0;
+  border-radius: 0;
+}
+
+.navbar-b .dropdown-menu .dropdown-item {
+  padding: 0.7rem 1.7rem;
+  transition: all 500ms ease;
+}
+
+.navbar-b .dropdown-menu .dropdown-item:hover {
+  background-color: #0078ff;
+  color: #fff;
+  transition: all 500ms ease;
+}
+
+.navbar-b .dropdown-menu .dropdown-item.active {
+  background-color: #0078ff;
+}
+
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle-button_close {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__line {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+}
+
+.toolbar {
+  top: 0;
+  left: 0;
+  height: 100px;
+}
+
+.toolbar__navigation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.toolbar__logo {
+  margin-left: 1rem;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.side-drawer {
+  height: 100%;
+  background: blue;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  max-width: 300px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+  color: #fff;
+  text-align: center;
+}
+
+.side-drawer.open {
+  transform: translateX(0);
+}
+
+.side-drawer ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-drawer li {
+  margin: 0.5rem 0;
+}
+
+.side-drawer a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active {
+  color: black;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 2rem;
+  background-color: blue;
+}
+
+footer .copyright {
+  margin-bottom: 0.3rem;
+  margin-top: 1.7rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:hover {
+  background-color: #0062d3;
+  color: #fff;
+  transition: all 500ms ease;
+}
+
+.navbar {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0;
+  min-height: 80px;
+}
+
+.nav li {
+  display: inline;
+  color: white;
+}
+
+.navbar-nav > li > a {
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 1.7em;
+  font-weight: 300;
+  padding: 30px 25px 33px 25px;
+}
+
+.navbar-brand {
+  color: black;
+  padding-top: 15px;
+  margin-bottom: 1px;
+}
+
+.navbar-brand:hover {
+  color: black;
+}
+
+nav li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+i {
+  color: black;
+}
+
+/* .facebook_icon {
+  color: #0062d3;
+}
+.yahoo_icon {
+  color: rgb(152, 14, 152);
+}
+.instagram_icon {
+  color: #fff;
+  border-radius: 8px;
+  background: linear-gradient(-130deg, purple, orangered, yellow);
+}
+
+.twitter_icon {
+  color: #0062d3;
+} */
+
+@media (min-width: 768px) {
+  .navbar-b.navbar-reduce .nav-item {
+    padding-left: 10px;
+  }
+
+  .navbar-b.navbar-reduce .nav-link:before {
+    margin-left: 18px;
+  }
+}
+
+@media (min-width: 769px) {
+  .side-drawer {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar_navigation-items {
+    display: none;
+  }
+  .navbar-b .navbar-brand {
+    color: #fff;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .toolbar__toggle-button {
+    display: none;
+  }
+
+  .toolbar__logo {
+    margin-left: 0;
+  }
+}
